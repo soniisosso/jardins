@@ -5,14 +5,14 @@ from geopy.distance import geodesic
 import webbrowser
 
 # ============================================================
-# CONFIG - à adapter si besoin
+# CONFIG -
 # ============================================================
 NOM_BASE = "jardindb"
-NOM_COLLECTION = "jardins"   # <-- Vérifie le vrai nom dans Navicat et remplace ici si différent
-RAYON_METRES = 10000         # 20 km : les jardins remarquables sont rares, donc rayon large
+NOM_COLLECTION = "jardins"   
+RAYON_METRES = 10000         
 # ============================================================
 
-# Initialiser le géocodeur (comme dans l'exemple du prof)
+# Initialiser le géocodeur 
 geolocator = Nominatim(user_agent="mon_application_jardins")
 
 # Demander l'adresse à l'utilisateur
@@ -63,8 +63,8 @@ if location:
 
     # Parcours des jardins
     for jardin in tablo_jardins:
-        # /!\ Différence avec l'exemple Vélib : ici PAS de sous-clé 'fields',
-        # les champs sont directement à la racine du document
+        
+        
         lat = jardin.get("latitude")
         lon = jardin.get("longitude")
 
